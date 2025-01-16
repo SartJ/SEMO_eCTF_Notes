@@ -27,6 +27,8 @@ git clone https://github.com/mitre-cyber-academy/2025-ectf-insecure-example
 ```
 
 ### Creating the Python Virtual Environment
+
+We used Powershell for the next commands.
 ```
 python -m venv .venv --prompt ectf-example
 ```
