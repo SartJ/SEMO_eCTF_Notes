@@ -13,6 +13,7 @@ Check if you already have them or not, as below:
 
 
 Document we referred to: https://rules.ectf.mitre.org/2025/getting_started/boot_reference.html
+
 OS Used: Windows
 
 ### Flashing the eCTF Bootloader
