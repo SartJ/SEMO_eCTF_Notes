@@ -10,6 +10,4 @@ Steps:
 
 2. Now we will see a drive named DAPLINK, where we need to drag and drop the '[insecure.bin](https://rules.ectf.mitre.org/_downloads/6176d2473ff417b11a757dd7967b19c2/insecure.bin)' file. There will be a progress bar, and the daplink drive will close. Then if we open it again, there will be no FAIL report hopefully. That means we succeeded. 
 
-3. Then we just need to run the "python -m ectf25.utils.flash .\decoder\build_out\max78000.bin COM4" command to flash it from the virtual environment. I.e. continue with booting the design reference.
-
-I believe we will be able to make all other boards ready, with the same issue.
+3. Flashing the eCTF Bootloader is done, continue with booting the design reference. Following steps given [here](https://github.com/SartJ/SEMO_eCTF_Notes/tree/main).
