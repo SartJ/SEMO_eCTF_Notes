@@ -14,8 +14,10 @@ Check if you already have them or not, as below:
 
 ### Is your team using a previously used MAX78000FTHR board with a previously used firmware booted?
 Follow the below link to see the steps on how to reboot/hard-reset it, and make it ready for flashing the Reference Design code:
+
 LINK (under-construction)
 
+### Okay, let's start
 Document we referred to: https://rules.ectf.mitre.org/2025/getting_started/boot_reference.html
 
 OS Used: Windows
