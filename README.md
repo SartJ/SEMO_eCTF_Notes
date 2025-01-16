@@ -8,6 +8,7 @@ First we made sure that our Windows machine had the following 3 tools installed:
 3. Docker (Installation steps can be found below)
 
 Check if you already have them or not, as below:
+
 ![image](https://github.com/user-attachments/assets/f50216fa-4eef-4aed-8a79-7d8c65598225)
 
 
