@@ -24,7 +24,9 @@ Follow the below link to see the steps on how to reboot/hard-reset it, and make 
 ### Flashing the eCTF Bootloader (for a new out of the box board)
 1. Download the MITRE eCTF insecure bootloader bin file [here](https://rules.ectf.mitre.org/_downloads/6176d2473ff417b11a757dd7967b19c2/insecure.bin)
 2. First plug in the device (out of the box device with a clean slate), then open the DAPLINK drive which appears in "This PC".
-3. Drag and drop the .bin file in that drive. A blue LED will flash once. It means that bootloader was successfully onboarded.
+3. Drag and drop the .bin file in that drive. A blue LED will start flashing on repeat. It means that bootloader was successfully onboarded.
+
+Next, on your windows host machine at any suitable location follow the next steps.
 
 ### Clone the Reference Design
 ```
