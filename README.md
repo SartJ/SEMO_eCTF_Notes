@@ -12,8 +12,8 @@ Check if you already have them or not, as below:
 ![image](https://github.com/user-attachments/assets/f50216fa-4eef-4aed-8a79-7d8c65598225)
 
 ### Okay, let's start
-Document we referred to: https://rules.ectf.mitre.org/2025/getting_started/boot_reference.html
-Reference design github link: https://github.com/mitre-cyber-academy/2025-ectf-insecure-example/
+- Document we referred to: https://rules.ectf.mitre.org/2025/getting_started/boot_reference.html
+- Reference design github link: https://github.com/mitre-cyber-academy/2025-ectf-insecure-example/
 
 OS Used: Windows
 
