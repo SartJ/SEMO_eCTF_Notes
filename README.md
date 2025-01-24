@@ -90,8 +90,8 @@ python -m ectf25.utils.flash .\decoder\build_out\max78000.bin COM3
 Replace the section labeled ‘COM3’ with the port you located earlier from Device Manager. Then the board is flashed.
 
 
-### Next Follow from the Example Utilization step given in the link below:
+### Next, try out the `Host Tools`:
 
-[Follow link](https://github.com/mitre-cyber-academy/2025-ectf-insecure-example/)
+[Follow link](https://github.com/mitre-cyber-academy/2025-ectf-insecure-example/?tab=readme-ov-file#host-tools-1)
 
 
