@@ -80,3 +80,64 @@ The encoder reads from the secrets file provided via the `--secrets` argument.
     ```
 * For `rand`:
   * Frames are generated internally based on the specified parameters.
+
+## Outputs
+
+### 1. Logging
+
+The script logs various events and data:
+
+* Raw input frames: `RAW IN C: <channel>, F: <raw_frame>, TS: <timestamp>`
+* Encoded frames: `ENC OUT <encoded_frame>`
+* Decoded frames: `DEC OUT <decoded_frame>`
+* Errors:
+  * If decoding doesn't match the raw input: `Decode frame <raw_frame> != <decoded_frame>`
+  * If input format is invalid (for `stdin`): Logs a warning.
+
+### 2. Dumped Files
+
+If specified, the script can dump the following data as JSON:
+
+* Raw Frames: Stored in `--dump-raw`.
+  * Example:
+  ```
+  [
+      [channel, "raw_frame", timestamp],
+      ...
+  ]
+  ```
+* Encoded Frames: Stored in `--dump-encoded`.
+  * Example:
+  ```
+  [
+      [channel, "encoded_frame", timestamp],
+      ...
+  ]
+  ```
+* Decoded Frames: Stored in `--dump-decoded`.
+  * Example:
+  ```
+  [
+      [channel, "decoded_frame", timestamp],
+      ...
+  ]
+  ```
+
+### 3. Performance Statistics
+
+If `--perf` is enabled, logs:
+
+* Encoder performance in bytes per second: `encoder <bytes/s>`
+* Decoder performance in bytes per second: `decoder <bytes/s>`
+
+### 4. Standard Output
+
+For `--stub-decoder`, encoded frames are printed to stdout instead of being passed to the decoder.
+
+### 5. Warnings and Errors
+
+* Warnings are logged for:
+  * Stubbed encoder/decoder.
+  * Invalid frame formats (e.g., incorrect JSON structure or `stdin` input).
+
+ 
