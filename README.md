@@ -11,21 +11,20 @@ Check if you already have them or not, as below:
 
 ![image](https://github.com/user-attachments/assets/f50216fa-4eef-4aed-8a79-7d8c65598225)
 
-
-### Is your team using a previously used MAX78000FTHR board with a previously used firmware booted?
-Follow the below link to see the steps on how to reboot/hard-reset it, and make it ready for flashing the Reference Design code:
-
-LINK (under-construction)
-
-### Okay, let's start
-Document we referred to: https://rules.ectf.mitre.org/2025/getting_started/boot_reference.html
+### Some important links:
+- Specification Home Page (eCTF 2025): https://rules.ectf.mitre.org/2025/index.html
+- Reference Design boot description: https://rules.ectf.mitre.org/2025/getting_started/boot_reference.html
+- Reference design github link: https://github.com/mitre-cyber-academy/2025-ectf-insecure-example/
 
 OS Used: Windows
 
-### Flashing the eCTF Bootloader
-1. Download the MITRE eCTF insecure bootloader bin file [here](https://rules.ectf.mitre.org/_downloads/6176d2473ff417b11a757dd7967b19c2/insecure.bin)
-2. First plug in the device (out of the box device with a clean slate), then open the DAPLINK drive which appears in "This PC".
-3. Drag and drop the .bin file in that drive. A blue LED will flash once. It means that bootloader was successfully onboarded.
+*Okay, let's start*
+
+### Flashing the eCTF Bootloader for the first time:
+Follow the below link to see the steps:
+[LINK](https://github.com/SartJ/SEMO_eCTF_Notes/tree/main/Reset_A_Board)
+
+Next, on your windows host machine at any suitable location follow the next steps.
 
 ### Clone the Reference Design
 ```
@@ -94,8 +93,8 @@ python -m ectf25.utils.flash .\decoder\build_out\max78000.bin COM3
 Replace the section labeled ‘COM3’ with the port you located earlier from Device Manager. Then the board is flashed.
 
 
-### Next Follow from the Example Utilization step given in the link below:
+### Next, try out the `Host Tools`:
 
-[Follow link](https://github.com/mitre-cyber-academy/2025-ectf-insecure-example/)
+[Follow link](https://github.com/mitre-cyber-academy/2025-ectf-insecure-example/?tab=readme-ov-file#host-tools-1)
 
 
