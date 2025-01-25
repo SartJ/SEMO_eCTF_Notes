@@ -97,4 +97,6 @@ Replace the section labeled ‘COM3’ with the port you located earlier from De
 
 [Follow link](https://github.com/mitre-cyber-academy/2025-ectf-insecure-example/?tab=readme-ov-file#host-tools-1)
 
+### Check how to utilize the `tester.py` too for testing the design:
 
+[Link](https://github.com/SartJ/SEMO_eCTF_Notes/blob/main/Tester_Tool/README.md)
