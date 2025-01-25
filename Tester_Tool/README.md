@@ -58,3 +58,25 @@ Each *subcommand* accepts additional *arguments*.
   * `file`: JSON file path with frames structured as `[[channel, frame, timestamp], ...]`.
   * `--real-ts`: Replace timestamps in the JSON with real/live timestamps.
   * `--loop`: Loop through the JSON file indefinitely.
+
+## Secret File
+
+The encoder reads from the secrets file provided via the `--secrets` argument.
+
+## Input Data
+
+* For `stdin`:
+  * Frames are inputted in the format:
+    ```
+    channel(int),frame(str),timestamp(int)
+    ```
+* For `json`:
+  * A JSON File structured as:
+    ```
+    [
+      [channel, "frame data", timestamp],
+      ...
+    ]
+    ```
+* For `rand`:
+  * Frames are generated internally based on the specified parameters.
