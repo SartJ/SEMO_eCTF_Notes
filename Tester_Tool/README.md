@@ -141,3 +141,36 @@ For `--stub-decoder`, encoded frames are printed to stdout instead of being pass
   * Invalid frame formats (e.g., incorrect JSON structure or `stdin` input).
 
  
+## Example Log
+
+### Command Used:
+```
+python -m ectf25.utils.tester --port COM4 -s secrets\secrets.json stdin
+```
+### Inputs and Outputs Logged:
+```
+1
+2025-01-25 08:50:48.909 | WARNING  | __main__:stdin_gen:67 - Frame should be in format of 'channel(int),frame(str),timestamp(int)'. Got '1'
+52,BEARDY,123
+2025-01-25 08:51:22.009 | DEBUG    | __main__:main:231 - RAW IN  C: 52, F: b'BEARDY', TS: 123
+2025-01-25 08:51:22.009 | DEBUG    | __main__:main:246 - ENC OUT b'4\x00\x00\x00{\x00\x00\x00\x00\x00\x00\x00BEARDY'
+2025-01-25 08:51:22.013 | DEBUG    | ectf25.utils.decoder:send_msg:272 - Sending packet b'%D\x12\x00'
+2025-01-25 08:51:22.015 | DEBUG    | ectf25.utils.decoder:try_parse:218 - Found header MessageHdr(opcode=<Opcode.ACK: 65>, len=0)
+2025-01-25 08:51:22.016 | DEBUG    | ectf25.utils.decoder:get_raw_msg:247 - Got message Message(opcode=<Opcode.ACK: 65>, body=b'')
+2025-01-25 08:51:22.016 | DEBUG    | ectf25.utils.decoder:send_msg:272 - Sending packet b'4\x00\x00\x00{\x00\x00\x00\x00\x00\x00\x00BEARDY'
+2025-01-25 08:51:22.020 | DEBUG    | ectf25.utils.decoder:try_parse:218 - Found header MessageHdr(opcode=<Opcode.ACK: 65>, len=0)
+2025-01-25 08:51:22.020 | DEBUG    | ectf25.utils.decoder:get_raw_msg:247 - Got message Message(opcode=<Opcode.ACK: 65>, body=b'')
+2025-01-25 08:51:22.021 | DEBUG    | ectf25.utils.decoder:try_parse:218 - Found header MessageHdr(opcode=<Opcode.DEBUG: 71>, len=22)
+2025-01-25 08:51:22.021 | DEBUG    | ectf25.utils.decoder:get_raw_msg:243 - Read block b'Checking subscription\n'
+2025-01-25 08:51:22.022 | DEBUG    | ectf25.utils.decoder:get_raw_msg:247 - Got message Message(opcode=<Opcode.DEBUG: 71>, body=b'Checking subscription\n')
+2025-01-25 08:51:22.022 | INFO     | ectf25.utils.decoder:get_msg:262 - Got DEBUG: b'Checking subscription\n'
+2025-01-25 08:51:22.023 | DEBUG    | ectf25.utils.decoder:try_parse:218 - Found header MessageHdr(opcode=<Opcode.DEBUG: 71>, len=19)
+2025-01-25 08:51:22.024 | DEBUG    | ectf25.utils.decoder:get_raw_msg:243 - Read block b'Subscription Valid\n'
+2025-01-25 08:51:22.024 | DEBUG    | ectf25.utils.decoder:get_raw_msg:247 - Got message Message(opcode=<Opcode.DEBUG: 71>, body=b'Subscription Valid\n')
+2025-01-25 08:51:22.024 | INFO     | ectf25.utils.decoder:get_msg:262 - Got DEBUG: b'Subscription Valid\n'
+2025-01-25 08:51:22.025 | DEBUG    | ectf25.utils.decoder:try_parse:218 - Found header MessageHdr(opcode=<Opcode.DECODE: 68>, len=6)
+2025-01-25 08:51:22.027 | DEBUG    | ectf25.utils.decoder:get_raw_msg:243 - Read block b'BEARDY'
+2025-01-25 08:51:22.027 | DEBUG    | ectf25.utils.decoder:get_raw_msg:247 - Got message Message(opcode=<Opcode.DECODE: 68>, body=b'BEARDY')
+2025-01-25 08:51:22.027 | INFO     | __main__:main:264 - DEC OUT b'BEARDY'
+
+```
