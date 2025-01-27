@@ -94,6 +94,12 @@ docker run --rm -v .\build_out:/out -v .\:/decoder -v .\..\secrets:/secrets -e D
 
 Building this image will take some time, roughly about 10 minutes.
 
+If you get errors in building the docker image, try logging in docker using the command below & then repeat the build process.
+
+```
+docker login -u **Your Username/Email** -p **Your Password**
+```
+
 ### Generating a Subscription Update
 
 Next, we will create a subscription update. We must change our location to the project root folder so we have access to the secrets. To do so and generate a new subscription, enter the commands:
@@ -212,3 +218,7 @@ sudo usermod -aG dialout $USER
 ### Next, try out the `Host Tools`:
 
 [Follow link](https://github.com/mitre-cyber-academy/2025-ectf-insecure-example/?tab=readme-ov-file#host-tools-1)
+
+### Check how to utilize the `tester.py` too for testing the design:
+
+[Link](https://github.com/SartJ/SEMO_eCTF_Notes/blob/main/Tester_Tool/README.md)

@@ -1,0 +1,223 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\Users\sarta\Desktop> cd .\2025-ectf-insecure-example\
+PS C:\Users\sarta\Desktop\2025-ectf-insecure-example> .\.venv\Scripts\Activate.ps1
+.\.venv\Scripts\Activate.ps1 : The term '.\.venv\Scripts\Activate.ps1' is
+not recognized as the name of a cmdlet, function, script file, or operable
+program. Check the spelling of the name, or if a path was included, verify
+that the path is correct and try again.
+At line:1 char:1
++ .\.venv\Scripts\Activate.ps1
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (.\.venv\Scripts\Activate.ps
+   1:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\sarta\Desktop\2025-ectf-insecure-example> python -m venv .venv --prompt ectf-example
+PS C:\Users\sarta\Desktop\2025-ectf-insecure-example> .\.venv\Scripts\Activate.ps1
+(ectf-example) PS C:\Users\sarta\Desktop\2025-ectf-insecure-example> python -m pip install .\tools\
+Processing c:\users\sarta\desktop\2025-ectf-insecure-example\tools
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting loguru (from ectf25==2025.1.15)
+  Using cached loguru-0.7.3-py3-none-any.whl.metadata (22 kB)
+Collecting pyserial (from ectf25==2025.1.15)
+  Using cached pyserial-3.5-py2.py3-none-any.whl.metadata (1.6 kB)
+Collecting tqdm (from ectf25==2025.1.15)
+  Using cached tqdm-4.67.1-py3-none-any.whl.metadata (57 kB)
+Collecting colorama>=0.3.4 (from loguru->ectf25==2025.1.15)
+  Using cached colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+Collecting win32-setctime>=1.0.0 (from loguru->ectf25==2025.1.15)
+  Using cached win32_setctime-1.2.0-py3-none-any.whl.metadata (2.4 kB)
+Using cached loguru-0.7.3-py3-none-any.whl (61 kB)
+Using cached pyserial-3.5-py2.py3-none-any.whl (90 kB)
+Using cached tqdm-4.67.1-py3-none-any.whl (78 kB)
+Using cached colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+Using cached win32_setctime-1.2.0-py3-none-any.whl (4.1 kB)
+Building wheels for collected packages: ectf25
+  Building wheel for ectf25 (pyproject.toml) ... done
+  Created wheel for ectf25: filename=ectf25-2025.1.15-py3-none-any.whl size=21124 sha256=f22e4c6db156b9d63291a15f17064dc875fd16d633c882d0c20c84a6b17dffae
+  Stored in directory: C:\Users\sarta\AppData\Local\Temp\pip-ephem-wheel-cache-j794l36k\wheels\e3\5b\fd\44cc1939e2c20698e4ff2a2e560cf79df44a51f3eab3e96e1b
+Successfully built ectf25
+Installing collected packages: pyserial, win32-setctime, colorama, tqdm, loguru, ectf25
+Successfully installed colorama-0.4.6 ectf25-2025.1.15 loguru-0.7.3 pyserial-3.5 tqdm-4.67.1 win32-setctime-1.2.0
+
+[notice] A new release of pip is available: 24.2 -> 25.0
+[notice] To update, run: python.exe -m pip install --upgrade pip
+(ectf-example) PS C:\Users\sarta\Desktop\2025-ectf-insecure-example> python -m pip install -e .\design\
+Obtaining file:///C:/Users/sarta/Desktop/2025-ectf-insecure-example/design
+  Installing build dependencies ... done
+  Checking if build backend supports build_editable ... done
+  Getting requirements to build editable ... done
+  Preparing editable metadata (pyproject.toml) ... done
+Requirement already satisfied: loguru in c:\users\sarta\desktop\2025-ectf-insecure-example\.venv\lib\site-packages (from ectf25_design==2025.0+example) (0.7.3)
+Requirement already satisfied: colorama>=0.3.4 in c:\users\sarta\desktop\2025-ectf-insecure-example\.venv\lib\site-packages (from loguru->ectf25_design==2025.0+example) (0.4.6)
+Requirement already satisfied: win32-setctime>=1.0.0 in c:\users\sarta\desktop\2025-ectf-insecure-example\.venv\lib\site-packages (from loguru->ectf25_design==2025.0+example) (1.2.0)
+Building wheels for collected packages: ectf25_design
+  Building editable for ectf25_design (pyproject.toml) ... done
+  Created wheel for ectf25_design: filename=ectf25_design-2025.0+example-0.editable-py3-none-any.whl size=2919 sha256=3f45d7752cc62297bcbaac955f3805c0bc635051e917b45c34d53478c1d0f302
+  Stored in directory: C:\Users\sarta\AppData\Local\Temp\pip-ephem-wheel-cache-ucnaf4_v\wheels\e9\10\31\0c62c3b6d6af163420e94085a7de999f8fd955c0ef3a028855
+Successfully built ectf25_design
+Installing collected packages: ectf25_design
+Successfully installed ectf25_design-2025.0+example
+
+[notice] A new release of pip is available: 24.2 -> 25.0
+[notice] To update, run: python.exe -m pip install --upgrade pip
+(ectf-example) PS C:\Users\sarta\Desktop\2025-ectf-insecure-example> mkdir secrets
+
+
+    Directory: C:\Users\sarta\Desktop\2025-ectf-insecure-example
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         1/26/2025  10:08 AM                secrets
+
+
+(ectf-example) PS C:\Users\sarta\Desktop\2025-ectf-insecure-example> python -m ectf25_design.gen_secrets secrets/secrets.json 1 3 4
+2025-01-26 10:08:56.810 | DEBUG    | __main__:main:90 - Generated secrets: b'{"channels": [1, 3, 4], "some_secrets": "EXAMPLE"}'
+2025-01-26 10:08:56.811 | SUCCESS  | __main__:main:98 - Wrote secrets to C:\Users\sarta\Desktop\2025-ectf-insecure-example\secrets\secrets.json
+(ectf-example) PS C:\Users\sarta\Desktop\2025-ectf-insecure-example> cd ./decoder
+(ectf-example) PS C:\Users\sarta\Desktop\2025-ectf-insecure-example\decoder>
+ docker run --rm -v .\build_out:/out -v .\:/decoder -v .\..\secrets:/secrets -e DECODER_ID=0xdeadbeef decoder
+Loaded project.mk
+****************************************************************************
+* Analog Devices MSDK
+* - User Guide: https://analogdevicesinc.github.io/msdk/USERGUIDE/
+* - Get Support: https://www.analog.com/support/technical-support.html
+* - Report Issues: https://github.com/Analog-Devices-MSDK/msdk/issues
+* - Contributing: https://analogdevicesinc.github.io/msdk/CONTRIBUTING/
+****************************************************************************
+- MKDIR /decoder/build
+make[1]: Entering directory '/decoder'
+- MKDIR /root/msdk-2024_02/Libraries/PeriphDrivers/bin/MAX78000/softfp
+- CC /root/msdk-2024_02/Libraries/CMSIS/../PeriphDrivers/Source/SYS/mxc_assert.c
+- CC /root/msdk-2024_02/Libraries/CMSIS/../PeriphDrivers/Source/SYS/mxc_delay.c
+- CC /root/msdk-2024_02/Libraries/CMSIS/../PeriphDrivers/Source/SYS/mxc_lock.c
+- CC /root/msdk-2024_02/Libraries/CMSIS/../PeriphDrivers/Source/SYS/nvic_table.c
+- CC /root/msdk-2024_02/Libraries/CMSIS/../PeriphDrivers/Source/SYS/pins_ai85.c
+- CC /root/msdk-2024_02/Libraries/CMSIS/../PeriphDrivers/Source/SYS/sys_ai85.c
+- CC /root/msdk-2024_02/Libraries/CMSIS/../PeriphDrivers/Source/ADC/adc_me17.c
+- CC /root/msdk-2024_02/Libraries/CMSIS/../PeriphDrivers/Source/ADC/adc_reva.c
+- CC /root/msdk-2024_02/Libraries/CMSIS/../PeriphDrivers/Source/AES/aes_me17.c
+- CC /root/msdk-2024_02/Libraries/CMSIS/../PeriphDrivers/Source/AES/aes_revb.c
+- CC /root/msdk-2024_02/Libraries/CMSIS/../PeriphDrivers/Source/CAMERAIF/cameraif_ai85.c
+- CC /root/msdk-2024_02/Libraries/CMSIS/../PeriphDrivers/Source/CAMERAIF/cameraif_reva.c
+- CC /root/msdk-2024_02/Libraries/CMSIS/../PeriphDrivers/Source/CRC/crc_me17.c
+- CC /root/msdk-2024_02/Libraries/CMSIS/../PeriphDrivers/Source/CRC/crc_reva.c
+- CC /root/msdk-2024_02/Libraries/CMSIS/../PeriphDrivers/Source/DMA/dma_me17.c
+- CC /root/msdk-2024_02/Libraries/CMSIS/../PeriphDrivers/Source/DMA/dma_reva.c
+- CC /root/msdk-2024_02/Libraries/CMSIS/../PeriphDrivers/Source/FLC/flc_common.c
+- CC /root/msdk-2024_02/Libraries/CMSIS/../PeriphDrivers/Source/FLC/flc_me17.c
+- CC /root/msdk-2024_02/Libraries/CMSIS/../PeriphDrivers/Source/FLC/flc_reva.c
+- CC /root/msdk-2024_02/Libraries/CMSIS/../PeriphDrivers/Source/GPIO/gpio_common.c
+- CC /root/msdk-2024_02/Libraries/CMSIS/../PeriphDrivers/Source/GPIO/gpio_ai85.c
+- CC /root/msdk-2024_02/Libraries/CMSIS/../PeriphDrivers/Source/GPIO/gpio_reva.c
+- CC /root/msdk-2024_02/Libraries/CMSIS/../PeriphDrivers/Source/I2C/i2c_me17.c
+- CC /root/msdk-2024_02/Libraries/CMSIS/../PeriphDrivers/Source/I2C/i2c_reva.c
+- CC /root/msdk-2024_02/Libraries/CMSIS/../PeriphDrivers/Source/I2S/i2s_ai85.c
+- CC /root/msdk-2024_02/Libraries/CMSIS/../PeriphDrivers/Source/I2S/i2s_reva.c
+- CC /root/msdk-2024_02/Libraries/CMSIS/../PeriphDrivers/Source/ICC/icc_me17.c
+- CC /root/msdk-2024_02/Libraries/CMSIS/../PeriphDrivers/Source/ICC/icc_reva.c
+- CC /root/msdk-2024_02/Libraries/CMSIS/../PeriphDrivers/Source/LP/lp_ai85.c
+- CC /root/msdk-2024_02/Libraries/CMSIS/../PeriphDrivers/Source/LPCMP/lpcmp_ai85.c
+- CC /root/msdk-2024_02/Libraries/CMSIS/../PeriphDrivers/Source/LPCMP/lpcmp_reva.c
+- CC /root/msdk-2024_02/Libraries/CMSIS/../PeriphDrivers/Source/OWM/owm_me17.c
+- CC /root/msdk-2024_02/Libraries/CMSIS/../PeriphDrivers/Source/OWM/owm_reva.c
+- CC /root/msdk-2024_02/Libraries/CMSIS/../PeriphDrivers/Source/PT/pt_ai85.c
+- CC /root/msdk-2024_02/Libraries/CMSIS/../PeriphDrivers/Source/PT/pt_reva.c
+- CC /root/msdk-2024_02/Libraries/CMSIS/../PeriphDrivers/Source/RTC/rtc_me17.c
+- CC /root/msdk-2024_02/Libraries/CMSIS/../PeriphDrivers/Source/RTC/rtc_reva.c
+- CC /root/msdk-2024_02/Libraries/CMSIS/../PeriphDrivers/Source/SEMA/sema_me17.c
+- CC /root/msdk-2024_02/Libraries/CMSIS/../PeriphDrivers/Source/SEMA/sema_reva.c
+- CC /root/msdk-2024_02/Libraries/CMSIS/../PeriphDrivers/Source/SPI/spi_me17.c
+- CC /root/msdk-2024_02/Libraries/CMSIS/../PeriphDrivers/Source/SPI/spi_reva1.c
+- CC /root/msdk-2024_02/Libraries/CMSIS/../PeriphDrivers/Source/TRNG/trng_ai85.c
+- CC /root/msdk-2024_02/Libraries/CMSIS/../PeriphDrivers/Source/TRNG/trng_revb.c
+- CC /root/msdk-2024_02/Libraries/CMSIS/../PeriphDrivers/Source/TMR/tmr_common.c
+- CC /root/msdk-2024_02/Libraries/CMSIS/../PeriphDrivers/Source/TMR/tmr_ai85.c
+- CC /root/msdk-2024_02/Libraries/CMSIS/../PeriphDrivers/Source/TMR/tmr_revb.c
+- CC /root/msdk-2024_02/Libraries/CMSIS/../PeriphDrivers/Source/UART/uart_ai85.c
+- CC /root/msdk-2024_02/Libraries/CMSIS/../PeriphDrivers/Source/UART/uart_common.c
+- CC /root/msdk-2024_02/Libraries/CMSIS/../PeriphDrivers/Source/UART/uart_revb.c
+- CC /root/msdk-2024_02/Libraries/CMSIS/../PeriphDrivers/Source/WDT/wdt_common.c
+- CC /root/msdk-2024_02/Libraries/CMSIS/../PeriphDrivers/Source/WDT/wdt_me17.c
+- CC /root/msdk-2024_02/Libraries/CMSIS/../PeriphDrivers/Source/WDT/wdt_revb.c
+- CC /root/msdk-2024_02/Libraries/CMSIS/../PeriphDrivers/Source/WUT/wut_ai85.c
+- CC /root/msdk-2024_02/Libraries/CMSIS/../PeriphDrivers/Source/WUT/wut_reva.c
+- AR /root/msdk-2024_02/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a
+make[1]: Leaving directory '/decoder'
+- CC src/decoder.c
+- CC src/host_messaging.c
+- CC src/simple_crypto.c
+- CC src/simple_flash.c
+- CC src/simple_uart.c
+- CC /root/msdk-2024_02/Libraries/Boards/MAX78000/FTHR_RevA/Source/board.c
+- CC /root/msdk-2024_02/Libraries/MiscDrivers/stdio.c
+- CC /root/msdk-2024_02/Libraries/MiscDrivers/LED/led.c
+- CC /root/msdk-2024_02/Libraries/MiscDrivers/PushButton/pb.c
+- CC /root/msdk-2024_02/Libraries/MiscDrivers/Display/tft_ili9341.c
+- CC /root/msdk-2024_02/Libraries/MiscDrivers/Camera/camera.c
+- CC /root/msdk-2024_02/Libraries/MiscDrivers/Camera/ov7692.c
+- CC /root/msdk-2024_02/Libraries/MiscDrivers/Camera/sccb.c
+- CC /root/msdk-2024_02/Libraries/MiscDrivers/PMIC/max20303.c
+- CC /root/msdk-2024_02/Libraries/MiscDrivers/CODEC/max9867.c
+- CC /root/msdk-2024_02/Libraries/MiscDrivers/SRAM/N01S830HA.c
+- CC /root/msdk-2024_02/Libraries/MiscDrivers/SRAM/fastspi.c
+- AS startup_firmware.S
+- CC /root/msdk-2024_02/Libraries/CMSIS/Device/Maxim/MAX78000/Source/heap.c
+- CC /root/msdk-2024_02/Libraries/CMSIS/Device/Maxim/MAX78000/Source/system_max78000.c
+- LD /decoder/build/max78000.elf
+Creating /decoder/build/max78000.srec
+Creating /decoder/build/max78000.hex
+Creating /decoder/build/max78000.bin
+Creating /decoder/build/max78000.dasm
+(ectf-example) PS C:\Users\sarta\Desktop\2025-ectf-insecure-example\decoder>
+ cd ..
+(ectf-example) PS C:\Users\sarta\Desktop\2025-ectf-insecure-example> python -m ectf25_design.gen_subscription secrets/secrets.json subscription.bin 0xDEADBEEF 32 128 30
+2025-01-26 10:10:33.961 | DEBUG    | __main__:main:95 - Generated subscription: b'\xef\xbe\xad\xde \x00\x00\x00\x00\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x00\x1e\x00\x00\x00'
+2025-01-26 10:10:33.963 | SUCCESS  | __main__:main:102 - Wrote subscription to C:\Users\sarta\Desktop\2025-ectf-insecure-example\subscription.bin
+(ectf-example) PS C:\Users\sarta\Desktop\2025-ectf-insecure-example> python -m ectf25.utils.flash .\decoder\build_out\max78000.bin COM4
+2025-01-26 10:10:46.833 | INFO     | __main__:update:70 - Requesting update
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\sarta\Desktop\2025-ectf-insecure-example\.venv\Lib\site-packages\ectf25\utils\flash.py", line 107, in <module>
+    main()
+  File "C:\Users\sarta\Desktop\2025-ectf-insecure-example\.venv\Lib\site-packages\ectf25\utils\flash.py", line 103, in main
+    BootloaderIntf(args.port).update(image)
+  File "C:\Users\sarta\Desktop\2025-ectf-insecure-example\.venv\Lib\site-packages\ectf25\utils\flash.py", line 73, in update
+    self._verify_resp()
+  File "C:\Users\sarta\Desktop\2025-ectf-insecure-example\.venv\Lib\site-packages\ectf25\utils\flash.py", line 50, in _verify_resp
+    while (resp := self.ser.read(1)) == b"":
+                   ^^^^^^^^^^^^^^^^
+  File "C:\Users\sarta\Desktop\2025-ectf-insecure-example\.venv\Lib\site-packages\serial\serialwin32.py", line 275, in read
+    raise SerialException("ClearCommError failed ({!r})".format(ctypes.WinError()))
+serial.serialutil.SerialException: ClearCommError failed (PermissionError(13, 'The device does not recognize the command.', None, 22))
+(ectf-example) PS C:\Users\sarta\Desktop\2025-ectf-insecure-example> python -m ectf25.utils.flash .\decoder\build_out\max78000.bin COM4
+2025-01-26 10:12:32.925 | INFO     | __main__:update:70 - Requesting update
+2025-01-26 10:12:34.890 | INFO     | __main__:update:77 - Update started
+2025-01-26 10:12:34.891 | INFO     | __main__:update:78 - Sending image data...
+100%|███████████████████████████████| 14336/14336 [00:38<00:00, 374.67it/s]
+2025-01-26 10:13:13.194 | INFO     | __main__:update:83 - Listening for installation status...
+
+2025-01-26 10:13:13.195 | SUCCESS  | __main__:update:89 - Update Complete!
+
+(ectf-example) PS C:\Users\sarta\Desktop\2025-ectf-insecure-example> python -m ectf25.tv.list COM4
+2025-01-26 10:13:24.446 | DEBUG    | ectf25.utils.decoder:send_msg:272 - Sending packet b'%L\x00\x00'
+2025-01-26 10:13:24.448 | DEBUG    | ectf25.utils.decoder:try_parse:218 - Found header MessageHdr(opcode=<Opcode.ACK: 65>, len=0)
+2025-01-26 10:13:24.448 | DEBUG    | ectf25.utils.decoder:get_raw_msg:247 - Got message Message(opcode=<Opcode.ACK: 65>, body=b'')
+2025-01-26 10:13:24.450 | DEBUG    | ectf25.utils.decoder:try_parse:218 - Found header MessageHdr(opcode=<Opcode.DEBUG: 71>, len=49)
+2025-01-26 10:13:24.453 | DEBUG    | ectf25.utils.decoder:get_raw_msg:243 - Read block b'Boot Reference Flag: ectf{boot_3d9af0de4aadbd15}\n'
+2025-01-26 10:13:24.453 | DEBUG    | ectf25.utils.decoder:get_raw_msg:247 - Got message Message(opcode=<Opcode.DEBUG: 71>, body=b'Boot Reference Flag: ectf{boot_3d9af0de4aadbd15}\n')
+2025-01-26 10:13:24.454 | INFO     | ectf25.utils.decoder:get_msg:262 - Got DEBUG: b'Boot Reference Flag: ectf{boot_3d9af0de4aadbd15}\n'
+2025-01-26 10:13:24.454 | DEBUG    | ectf25.utils.decoder:try_parse:218 - Found header MessageHdr(opcode=<Opcode.LIST: 76>, len=4)
+2025-01-26 10:13:24.455 | DEBUG    | ectf25.utils.decoder:get_raw_msg:243 - Read block b'\x00\x00\x00\x00'
+2025-01-26 10:13:24.455 | DEBUG    | ectf25.utils.decoder:get_raw_msg:247 - Got message Message(opcode=<Opcode.LIST: 76>, body=b'\x00\x00\x00\x00')
+2025-01-26 10:13:24.456 | DEBUG    | ectf25.utils.decoder:list:174 - Reported 0 subscribed channels
+2025-01-26 10:13:24.456 | SUCCESS  | __main__:main:42 - List successful
+(ectf-example) PS C:\Users\sarta\Desktop\2025-ectf-insecure-example>
