@@ -20,6 +20,8 @@ Check if you already have them or not, as below:
 
 OS Used: Windows
 
+For Linux Users: [Link](https://github.com/SartJ/SEMO_eCTF_Notes/tree/updated-readme/LInux_Documentation)
+
 _Okay, let's start_
 
 ### Flashing the eCTF Bootloader for the first time:
