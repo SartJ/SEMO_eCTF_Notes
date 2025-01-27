@@ -1,4 +1,4 @@
-# SEMO_eCTF_Notes
+# SEMO_eCTF_2025_Notes
 
 ## Reference Design Boot Details:
 
