@@ -1,5 +1,5 @@
-# HEX file required to reset the board can be found in the below link:
-[Link](https://rules.ectf.mitre.org/_downloads/40b89a45566a9061f2a18d8d73d6e5af/DAPLink_NoReset.hex)
+# HEX file required to reset the board can be found from the below linked page:
+Please go [Here](https://rules.ectf.mitre.org/2025/getting_started/daplink.html) and click on the link called "*Download the DAPLink interface firmware here: DAPLink_NoReset.hex*".
 
 ## Steps:
 1. Download the HEX file from the above link.
