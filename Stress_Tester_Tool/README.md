@@ -126,3 +126,99 @@ The script then raises an exception.
 - `0` for success
 - `-1` for failures (low throughput, encoding/decoding errors)
 
+
+## Example Command-Line Commands
+
+### 1. Running the Encoder Test
+
+```sh
+python stress_test.py encode -f 128 -t 50000000 secrets.bin --dump encoded_frames.json
+```
+
+#### Explanation:
+
+- `encode` → Runs the encoder test.
+- `-f 128` → Each frame is 128 bytes.
+- `-t 50000000` → Processes 50MB of data.
+- `secrets.bin` → Reads the secrets file.
+- `--dump encoded_frames.json` → Saves the encoded frames to `encoded_frames.json`.
+
+### 2. Running the Decoder Test
+
+```sh
+python stress_test.py decode COM3 encoded_frames.json
+```
+#### Explanation:
+
+- `decode` → Runs the decoder test.
+- `COM3` → Uses serial port COM3 (adjust for your system).
+- `encoded_frames.json` → Reads the previously encoded frames.
+
+### 3. Customizing Channels for Encoding
+
+```sh
+python stress_test.py encode -f 64 -t 20000000 -c 0 -c 2 secrets.bin --dump encoded_frames.json
+```
+
+#### Explanation:
+
+- `-c 0 -c 2` → Randomly selects channels 0 and 2 for encoding.
+
+
+### 4. Increasing the Test Size for Stress Testing
+
+```sh
+python stress_test.py encode -f 256 -t 1000000000 secrets.bin
+```
+
+#### Explanation:
+
+- `-f 256` → Uses 256-byte frames.
+- `-t 1000000000` → Processes 1GB of data.
+
+### 5. Running the Decoder with a Lower Throughput Threshold
+
+```sh
+python stress_test.py decode COM3 encoded_frames.json --threshold 5000
+```
+
+#### Explanation:
+
+- `--threshold 5000` → Requires at least 5 KBps throughput.
+
+
+### 6. Running the Encoder and Decoder with Default Values
+
+```sh
+python stress_test.py encode secrets.bin
+python stress_test.py decode COM3 encoded_frames.json
+```
+
+#### Defaults Used:
+
+- 64-byte frames
+- 100MB of data
+- All available channels
+- Default throughput thresholds
+
+### 7. Checking Help Menu
+
+To see all available options:
+
+```sh
+python stress_test.py --help
+```
+
+For encoding-specific options:
+
+```sh
+python stress_test.py encode --help
+```
+
+For decoding-specific options:
+
+```sh
+python stress_test.py decode --help
+```
+
+
