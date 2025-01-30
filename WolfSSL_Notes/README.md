@@ -38,4 +38,5 @@ docker run --rm -v .\build_out:/out -v .\:/decoder -v .\..\secrets:/secrets -e D
 ![image](https://github.com/user-attachments/assets/7ff13ff8-71de-4ad4-94d0-3050da1d4989)
 
 ## With Wolf
-![image](https://github.com/user-attachments/assets/e9a40954-03ac-4431-bc75-da1c79533293)
+![image](https://github.com/user-attachments/assets/a4b2cc98-cd50-4180-8769-bcce0b8ab831)
+
