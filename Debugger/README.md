@@ -1,5 +1,8 @@
 # Debugging Flag Tutorial
 
+#### Author:
+- [Alimus Sifar](https://github.com/AlimusSifar)
+
 ## Pre-requisites
 
 - Debug Bootloaders (`gdb_challenge_25.bin`, `gdb_challenge_25.elf`)
