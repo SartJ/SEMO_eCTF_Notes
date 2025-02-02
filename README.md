@@ -134,3 +134,7 @@ Replace the section labeled ‘COM3’ with the port you located earlier from De
 ### Check how to utilize the `stress_test.py` tool:
 
 [Link](https://github.com/SartJ/SEMO_eCTF_Notes/tree/main/Stress_Tester_Tool)
+
+### Enable WolfSSL, in a few steps:
+
+[Link](https://github.com/SartJ/SEMO_eCTF_Notes/tree/main/WolfSSL_Notes)
