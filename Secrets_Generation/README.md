@@ -4,7 +4,8 @@
 
 ## Author
 
-**The Dark Knight**(https://www.linkedin.com/in/uzairhussain0/) Savior Of R3DH4Ck5 (SEMO MITRE eCTF Team)
+[The Knight](https://www.linkedin.com/in/uzairhussain0/)
+Savior Of R3DH4Ck5 (SEMO MITRE eCTF Team)
 
 ![Avatar](https://media.tenor.com/NngS_U0rYAkAAAAM/batman.gif)
 
