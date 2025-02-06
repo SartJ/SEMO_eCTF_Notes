@@ -38,6 +38,7 @@ docker run --rm -v .\build_out:/out -v .\:/decoder -v .\..\secrets:/secrets -e D
 ## Update firmware
 - Plug in the decoder
 - Paste the `insecure.bin` file into the DAPLINK drive
+- Download the insecure.bin file if you don't already have it from here: [Link](https://rules.ectf.mitre.org/_downloads/6176d2473ff417b11a757dd7967b19c2/insecure.bin)
 - Use the below command to flash the new firmware with WolfSSL enabled:
 ```sh
 python -m ectf25.utils.flash .\decoder\build_out\max78000.bin COM3
