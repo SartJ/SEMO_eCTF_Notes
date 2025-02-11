@@ -82,8 +82,7 @@ python -m pip install -e .\design\
 Creating shared secrets which will be used by both the Encoder and Decoder:
 
 ```
-mkdir secrets
-python -m ectf25_design.gen_secrets secrets/secrets.json 1 3 4
+python -m ectf25_design.gen_secrets global.secrets 1 3 4
 ```
 
 Next we will create the build environment with docker build and the Decoder with an ID of 0xdeadbeef with docker run:
