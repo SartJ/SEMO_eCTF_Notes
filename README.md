@@ -101,6 +101,16 @@ If you get errors in building the docker image, try logging in docker using the 
 docker login -u **Your Username/Email** -p **Your Password**
 ```
 
+### Docker Interactive Terminal Set-up Commands
+```
+docker build -t decoder .
+
+docker run -v .\build_out:/out -v .\:/decoder -it de
+coder
+
+make release
+```
+
 ### Generating a Subscription Update
 
 Next, we will create a subscription update. We must change our location to the project root folder so we have access to the secrets. To do so and generate a new subscription, enter the commands:
