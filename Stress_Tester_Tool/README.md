@@ -1,3 +1,8 @@
+```
+ python .\tools\ectf25\utils\stress_test.py -c 1 -f 56 -t 57 encode global.secrets
+```
+
+
 # Stress Tester Tool Notes
 
 The script is a stress test for an encoder and decoder system used in the MITRE eCTF 2025 competition. It accepts command-line arguments and runs performance tests on encoding and decoding data frames.
