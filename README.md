@@ -103,12 +103,15 @@ docker login -u **Your Username/Email** -p **Your Password**
 
 ### Docker Interactive Terminal Set-up Commands
 ```
+cd .\decoder\
+
 docker build -t decoder .
 
-docker run -v .\build_out:/out -v .\:/decoder -it de
-coder
+docker run -v .\build_out:/out -v .\:/decoder -it decoder
 
 make release
+
+cd ..
 ```
 
 ### Generating a Subscription Update
