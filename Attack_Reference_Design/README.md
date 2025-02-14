@@ -22,8 +22,6 @@ Example:
 └── ...
 ```
 
-> NOTE: The Attack Board will be in update mode from the start. Verify this by looking at the blue LED blinking. "Once it flashes, it may not flash again.**
-
 ## Contents included in `attack_package.zip`
 
 ### Attacker Decoder
@@ -44,6 +42,8 @@ Example:
 ## Flashing the Attacker Decoder
 
 Copy `attacker.bin` file and paste it in the `DAPLINK` drive to flash the attacker decoder. If successful, the board will turn on the green LED.
+
+> _**NOTE:** The Attack Board will be in update mode from the start. Verify this by looking at the blue LED blinking. "Once it flashes, it may NOT flash again._
 
 At this moment, the board will have no subscriptions. Verify that by running:
 ```bash
@@ -149,7 +149,7 @@ To decode Channel 1’s flag, we need to analyze the encoded frame from frame_pl
 
 
 - Copy the encoded frame and start tracing from `tools\ectf25\tv\run.py`.
-- Navigate to line 130 in `tools\ectf25\utils\decoder.py`. Replace the encoded frame in bytes for decoding
+- Navigate to line 130 in `tools\ectf25\utils\decoder.py`. Paste the encoded frame (in bytes) in frame varieble for decoding.
 
 ```python
 def decode(self, frame: bytes) -> bytes:
