@@ -1,5 +1,7 @@
 # Attacker Flag Tutorial
 
+#### Author: [Alimus Sifar](https://github.com/AlimusSifar)
+
 **Download the `attack_package.zip` from here:** [Link](https://github.com/SartJ/SEMO_eCTF_Notes/blob/main/Attack_Reference_Design/attack_package.zip)
 
 **Extract the contents of `attack_package.zip` file** in the directory where `.venv` is located. 
