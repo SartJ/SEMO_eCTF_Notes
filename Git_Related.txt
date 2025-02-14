@@ -1,0 +1,35 @@
+# Step 1: Check your existing remotes (just to confirm)
+git remote -v
+
+# Step 2: Fetch the latest changes from the public repository
+git fetch upstream
+
+# Step 3: Switch to your main branch
+git checkout main
+
+# Step 4: Merge changes from the public repository into your main branch
+git merge upstream/main
+
+# (Optional) Use rebase instead of merge for a cleaner history
+# git rebase upstream/main
+
+# Step 5: Push the merged/rebased changes to your private repository
+git push origin main
+
+# (If you rebased and Git prevents the push, force the push using:)
+# git push origin main --force
+
+
+OTHER BRANCHES:
+
+# Step 5: Switch to your other branch
+git checkout <your-branch-name>
+
+# Step 6: Merge the updated main branch into your other branch
+git merge main
+
+# (Optional) If you prefer rebase instead of merge
+# git rebase main
+
+# Step 7: Push the updated branch to your private repository
+git push origin <your-branch-name>
