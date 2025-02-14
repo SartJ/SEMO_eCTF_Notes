@@ -143,9 +143,6 @@ Replace the section labeled ‘COM3’ with the port you located earlier from De
 
 [Link](https://github.com/SartJ/SEMO_eCTF_Notes/blob/main/Tester_Tool/README.md)
 
-### Notes for Reference Design Attack:
-[Link](https://github.com/SartJ/SEMO_eCTF_Notes/tree/main/Attack_Reference_Design)
-
 ### Check how to utilize the `stress_test.py` tool:
 
 [Link](https://github.com/SartJ/SEMO_eCTF_Notes/tree/main/Stress_Tester_Tool)
@@ -153,3 +150,6 @@ Replace the section labeled ‘COM3’ with the port you located earlier from De
 ### Enable WolfSSL, in a few steps:
 
 [Link](https://github.com/SartJ/SEMO_eCTF_Notes/tree/main/WolfSSL_Notes)
+
+### Notes for Reference Design Attack:
+[Link](https://github.com/SartJ/SEMO_eCTF_Notes/tree/main/Attack_Reference_Design)
