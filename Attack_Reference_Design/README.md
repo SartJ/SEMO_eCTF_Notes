@@ -1,6 +1,10 @@
 # Attacker Flag Tutorial
 
-**Extract the contents of `attack_package.zip` file** in the directory where `.venv` is located. Example:
+**Extract the contents of `attack_package.zip` file** in the directory where `.venv` is located. 
+
+**Or, Download from here:** [Link](https://github.com/SartJ/SEMO_eCTF_Notes/tree/main/Attack_Reference_Design/attack_package)
+
+Example:
 
 ```bash
 <project_root>\
