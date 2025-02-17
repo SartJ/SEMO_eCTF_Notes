@@ -181,3 +181,23 @@ For 1000 frames and save to a txt file the output
 ```ps
 python -m ectf25.utils.tester --stub-decoder --port COM4 -s global.secrets rand -c 1 -f 64 -n 1000 *> log_1000fffff.txt
 ```
+
+
+
+
+
+NOTES:
+
+channel 0 and subscription update - it will decline - verify this scenario
+
+frame received on channel 0.
+
+change the comments existing testing should remain same
+
+unnencessary function removal double check --
+
+unneccessary error debug print - delete
+
+change the docker file back 
+
+hash the decoder id - study which hashing algo to use - deadbeef - hashbeef12312234 (first boot)
