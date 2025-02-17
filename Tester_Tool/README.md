@@ -174,3 +174,10 @@ python -m ectf25.utils.tester --port COM4 -s secrets\secrets.json stdin
 2025-01-25 08:51:22.027 | INFO     | __main__:main:264 - DEC OUT b'BEARDY'
 
 ```
+
+
+For 1000 frames and save to a txt file the output
+
+```ps
+python -m ectf25.utils.tester --stub-decoder --port COM4 -s global.secrets rand -c 1 -f 64 -n 1000 *> log_1000fffff.txt
+```
