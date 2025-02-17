@@ -132,6 +132,9 @@ Now we flash the board:
 ```
 python -m ectf25.utils.flash .\decoder\build_out\max78000.bin COM3
 ```
+```ps
+python -m ectf25.utils.flash .\decoder\build\max78000.bin COM3
+```
 
 Replace the section labeled ‘COM3’ with the port you located earlier from Device Manager. Then the board is flashed.
 
