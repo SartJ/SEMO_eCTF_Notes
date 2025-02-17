@@ -201,3 +201,7 @@ unneccessary error debug print - delete
 change the docker file back 
 
 hash the decoder id - study which hashing algo to use - deadbeef - hashbeef12312234 (first boot)
+
+stress tester to reproduce the 10frames scenario
+
+python code to generate some abnormal messages
