@@ -90,7 +90,7 @@ Next we will create the build environment with docker build and the Decoder with
 ```
 cd ./decoder
 docker build -t decoder .
-docker run --rm -v .\build_out:/out -v .\:/decoder -v .\..\secrets:/secrets -e DECODER_ID=0xdeadbeef decoder
+docker run --rm -v .\build_out:/out -v .\:/decoder -e DECODER_ID=0xdeadbeef decoder
 ```
 
 Building this image will take some time, roughly about 10 minutes.
