@@ -120,7 +120,7 @@ Next, we will create a subscription update. We must change our location to the p
 
 ```
 cd <design_root>
-python -m ectf25_design.gen_subscription secrets/secrets.json subscription.bin 0xDEADBEEF 32 128 1
+python -m ectf25_design.gen_subscription global.secrets subscription.bin 0xDEADBEEF 32 128 1
 ```
 
 This will create a binary file, that can be applied to the the Decoder we created previously (ID 0xDEADBEEF) to subscribe to channel one from the timestamp 32 to the timestamp 128.
